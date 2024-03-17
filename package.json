@@ -1,0 +1,15 @@
+{
+  "name": "intro-backendavanzado-g27a-proyecto",
+  "version": "1.0.0",
+  "description": "proyecto backend avanzado sistema de cine",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alejandro",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
