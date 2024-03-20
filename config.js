@@ -13,7 +13,7 @@ const connect = () => {
     });
 
     connection.once('error', () => {
-        console.error('error connecting to database');
+        console.error('Error connecting to database');
     });
 };
 
