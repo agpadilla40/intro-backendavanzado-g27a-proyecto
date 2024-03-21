@@ -2,7 +2,7 @@ import jwt from 'jwt-simple';
 
 const authValidator = (req, res, next) => {
   //Obtener token de los headers
-  const token = req.header['authorization'];
+  const token = req.headers['authorization'];
   //Valido que si venga el token
   if (!token) {
     return res.status(403).json({
@@ -19,6 +19,7 @@ const authValidator = (req, res, next) => {
   } catch (error) {
     return res.status(403).json({
       msg: 'Wrong token',
+      error,
     });
   }
 };
