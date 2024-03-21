@@ -38,7 +38,7 @@ const updateUser = async (req, res) => {
 
     const deleteUser = async (req, res) => {
         
-        const deletedUser = await User.findByIdUpdate(
+        const deletedUser = await User.findByIdAndUpdate(
             
             req.params.userId,
 

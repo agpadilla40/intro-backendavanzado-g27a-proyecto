@@ -5,16 +5,31 @@ const userSchema = new mongoose.Schema({
     name: String,
     lastName: String,
     birthDate: Date,
-    rol: String,
     phone: String,
-    username: { type: String, unique: true },
-    email: { type: String, unique: true },
-    password: String,
+    username: { 
+        type: String, 
+        required: true,
+        unique: true, 
+    },
+    password:{ 
+        type: String,
+        required: true,    
+    },
+    email: {
+         type: String,
+         required: true,
+         unique: true 
+    },
+    rol: {
+        type: String,
+        required: true,
+        enum: ['ADMIN', 'CLIENT', 'EMPLOYEE'],
+        default: 'CLIENT',    
+    },
     isDeleted: { 
         type: Boolean, 
         default: false
-     },
+    },
 });
-
 
 export default  mongoose.model('User', userSchema);

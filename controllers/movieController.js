@@ -38,7 +38,7 @@ const updateMovie = async (req, res) => {
 
     const deleteMovie = async (req, res) => {
         
-        const deletedMovie = await Movie.findByIdUpdate(
+        const deletedMovie = await Movie.findByIdAndUpdate(
             
             req.params.movieId,
 

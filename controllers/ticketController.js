@@ -38,7 +38,7 @@ const updateTicket = async (req, res) => {
 
     const deleteTicket = async (req, res) => {
         
-        const deletedTicket = await Ticket.findByIdUpdate(
+        const deletedTicket = await Ticket.findByIdAndUpdate(
             
             req.params.ticketId,
 
