@@ -3,6 +3,7 @@ import express from "express";
 import movieRoutes from './routes/movieRoutes.js';
 import ticketRoutes from './routes/ticketRoutes.js';
 import userRoutes from './routes/userRoutes.js';
+import authRoutes from './routes/authRoutes.js';
 
 connect();
 
@@ -21,4 +22,5 @@ api.get('/test', (req, res) => {
 api.use('/movies', movieRoutes);
 api.use("/tickets", ticketRoutes);
 api.use("/users", userRoutes);
+api.use("/auth", authRoutes);
 
